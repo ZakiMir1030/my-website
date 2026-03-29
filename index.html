@@ -923,11 +923,11 @@ function sendMessage() {
     // البيانات المرسلة للقالب في EmailJS
     // يجب أن تتطابق أسماء المتغيرات مع ما في قالبك
     const templateParams = {
-        from_name:  name,
-        from_email: email,
-        subject:    subject || "General",
-        message:    message
-    };
+    name:    name,       // كان from_name
+    email:   email,      // كان from_email
+    Subject: subject || "General",  // كان subject
+    message: message
+};
 
     // إرسال الرسالة
     emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, templateParams)
